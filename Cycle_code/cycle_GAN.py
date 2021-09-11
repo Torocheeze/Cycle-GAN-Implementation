@@ -23,6 +23,13 @@ class Cycle_GAN():
         self.save_sample = sample_save_path
         self.save_model = model_save
 
+        if not os.path.isdir(self.save_sample):
+            os.mkdir(self.save_sample)
+
+        if not os.path.isdir(self.save_model):
+            os.mkdir(self.save_model)
+
+
     def build_compute_graph(self, cycle_loss = 10.0):
         # Optimizer
         optimizer = Adam(0.0002, 0.5)

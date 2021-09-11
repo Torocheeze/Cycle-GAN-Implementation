@@ -14,6 +14,9 @@ class tester():
         self.model.load_weights(model_path)
         self.res_path = res_path
 
+        if not os.path.isdir(self.res_path):
+            os.mkdir(self.res_path)
+
     def preprocess(self):
         file_list = os.listdir(self.test_path)
 

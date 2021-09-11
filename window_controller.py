@@ -8,7 +8,7 @@ from UI import Ui_Imape_processor
 
 class MainWindow_controller(QtWidgets.QMainWindow):
     def __init__(self):
-        super().__init__() # in python3, super(Class, self).xxx = super().xxx
+        super().__init__()
         self.ui = Ui_Imape_processor()
         self.ui.setupUi(self)
         self.setup_control()
